@@ -22,8 +22,6 @@ stack_t *second = (*stack)->next;
 		first->next->prev = first;
 
 	first->prev = second;
-	first->next = second->next;
-	second->prev = NULL;
 	second->next = first;
 	*stack = second;
 }
