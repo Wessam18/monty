@@ -21,13 +21,11 @@ stack_t *head = NULL;
 	}
 	name = argv[1];
 	fd = fopen(name, "r");
-
 	if (fd == NULL)
 	{
 		fprintf(stderr, "Error: cannot open file %s.\n", name);
 		exit(EXIT_FAILURE);
 	}
-
 	while ((read_file = getline(&lline, &n, fd)) != -1)
 	{
 		line_number++;
