@@ -31,6 +31,8 @@ stack_t *head = NULL;
 	while ((read_file = getline(&lline, &n, fd)) != -1)
 	{
 		line_number++;
+		if (*lline == '#')
+			continue;
 		execute_monty(lline, line_number, &head);
 	}
 	fclose(fd);
