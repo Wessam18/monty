@@ -13,7 +13,8 @@ char *op = strtok(line, " \t\n");
 instruction_t monty[] = {
 	{"push", push_element}, {"pall", p_all}, {"pint", print_int},
 	{"pop", remove_element}, {"swap", swap_nodes}, {"add", add_elements},
-	{"sub", sub_elements}, {"div", div_elements}, {"mul", mul_elements}, {"nop", nop}, {NULL, NULL}
+	{"sub", sub_elements}, {"div", div_elements}, {"mul", mul_elements},
+	{"mod", mod_elements}, {"nop", nop}, {NULL, NULL}
 };
 
 	if (op == NULL)

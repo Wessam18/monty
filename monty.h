@@ -51,6 +51,7 @@ void add_elements(stack_t **stack, unsigned int line_number);
 void sub_elements(stack_t **stack, unsigned int line_number);
 void div_elements(stack_t **stack, unsigned int line_number);
 void mul_elements(stack_t **stack, unsigned int line_number);
+void mod_elements(stack_t **stack, unsigned int line_number);
 
 void free_nodes(stack_t **stack);
 void nop(stack_t **stack, unsigned int line_number);
