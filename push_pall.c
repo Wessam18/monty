@@ -34,7 +34,7 @@ void print_all(stack_t **head, __attribute__((unused))unsigned int num_line)
 {
 stack_t *temp = *head;
 
-	while (temp != *head)
+	while (temp != NULL)
 	{
 		printf("%d\n", temp->n);
 		temp = temp->next;
