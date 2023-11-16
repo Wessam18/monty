@@ -11,12 +11,12 @@ char *name, *lline = NULL;
 FILE *fd;
 size_t n = 0;
 ssize_t read_file;
-unsigned int num_line = 0;
+unsigned int line_number = 0;
 stack_t *head = NULL;
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "Error: please provide a file as an argument.\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 	name = argv[1];
@@ -30,11 +30,11 @@ stack_t *head = NULL;
 
 	while ((read_file = getline(&lline, &n, fd)) != -1)
 	{
-		num_line++;
-		execute_monty(lline, num_line, &head);
+		line_number++;
+		execute_monty(lline, line_number, &head);
 	}
 	fclose(fd);
 	free(lline);
 	free_nodes(&head);
-	return (EXIT_SUCCESS);
+	return (0);
 }
