@@ -32,6 +32,8 @@ stack_t *head = NULL;
 	{
 		line_number++;
 		execute_monty(lline, line_number, &head);
+		
+		
 	}
 	fclose(fd);
 	free(lline);

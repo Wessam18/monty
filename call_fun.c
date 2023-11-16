@@ -8,6 +8,7 @@
 void execute_monty(char *line, unsigned int line_number, stack_t **stack)
 {
 int i;
+char *arg;
 char *op = strtok(line, " \t\n");
 instruction_t monty[] = {
 	{"push", push_element}, {"pall", p_all}, {"pint", print_int},
@@ -22,7 +23,20 @@ instruction_t monty[] = {
 	{
 		if (strcmp(op, monty[i].opcode) == 0)
 		{
-			monty[i].f(stack, line_number);
+			if (strcmp(op, "push") == 0)
+			{
+				arg = strtok(NULL, " \t\n");
+				if (arg == NULL || atoi(arg) == 0)
+				{
+					fprintf(stderr, "L%d: usage: push integer\n", line_number);
+					exit(EXIT_FAILURE);
+				}
+				monty[i].f(stack, atoi(arg));
+			}
+			else
+			{
+				monty[i].f(stack, line_number);
+			}
 			return;
 		}
 	}
