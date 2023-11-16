@@ -1,42 +1,42 @@
 #include "monty.h"
 /**
  * print_int - function to convert arg. to int and print all.
- * @head: head of the stack.
- * @num_line: number of arguments in line
+ * @stack: head of the stack.
+ * @line_number: number of arguments in line
 */
-void print_int(stack_t **head, unsigned int num_line)
+void print_int(stack_t **stack, unsigned int line_number)
 {
-	if (*head == NULL)
+	if (*stack == NULL)
 	{
-		fprintf(stderr, "Error: L%d: can't pint, stack empty\n", num_line);
+		fprintf(stderr, "Error: L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
-	printf("%d\n", (*head)->n);
+	printf("%d\n", (*stack)->n);
 }
 
 /**
  * remove_element - function to pop elements from stack
- * @head: head of the stack
- * @num_line: number of args in line.
+ * @stack: head of the stack
+ * @line_number: number of args in line.
 */
-void remove_element(stack_t **head, unsigned int num_line)
+void remove_element(stack_t **stack, unsigned int line_number)
 {
 stack_t *top;
 
-	if (*head == NULL)
+	if (*stack == NULL)
 	{
-		fprintf(stderr, "Error: L%d: can't pop stack\n", num_line);
+		fprintf(stderr, "Error: L%d: can't pop stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
 
-	top = *head;
-	*head = top->next;
+	top = *stack;
+	*stack = top->next;
 
-	if (*head != NULL)
+	if (*stack != NULL)
 	{
-		(*head)->prev = NULL;
+		(*stack)->prev = NULL;
 	}
 	free(top);
 }

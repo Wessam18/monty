@@ -1,17 +1,17 @@
 #include "monty.h"
 /**
  * swap_nodes - function to swap nodes.
- * @head: head of the stack
- * @num_line: number of args in the line
+ * @stack: head of the stack
+ * @line_number: number of args in the line
 */
-void swap_nodes(stack_t **head, unsigned int num_line)
+void swap_nodes(stack_t **stack, unsigned int line_number)
 {
-stack_t *first = *head;
-stack_t *second = (*head)->next;
+stack_t *first = *stack;
+stack_t *second = (*stack)->next;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "Error: L%d: can't swap, stack too short\n", num_line);
+		fprintf(stderr, "Error: L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -23,22 +23,22 @@ stack_t *second = (*head)->next;
 
 	first->prev = second;
 	second->next = first;
-	*head = second;
+	*stack = second;
 }
 
 /**
  * add_elements - function that add the first 2 elements of the stack
- * @head: head of the stack
- * @num_line: number of the args in the line
+ * @stack: head of the stack
+ * @line_number: number of the args in the line
 */
-void add_elements(stack_t **head, unsigned int num_line)
+void add_elements(stack_t **stack, unsigned int line_number)
 {
-	if (*head == NULL || (*head)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "Error: L%d: can't add, stack too short\n", num_line);
+		fprintf(stderr, "Error: L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
-	(*head)->next->n += (*head)->n;
-	remove_element(head, num_line);
+	(*stack)->next->n += (*stack)->n;
+	remove_element(stack, line_number);
 }

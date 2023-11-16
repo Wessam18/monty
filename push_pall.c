@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
  * push_element - function to insert elements into stack
- * @head: head of linked list.
+ * @stack: head of linked list.
  * @value: value which need to insert.
 */
-void push_element(stack_t **head, unsigned int value)
+void push_element(stack_t **stack, unsigned int value)
 {
 stack_t *new_node = malloc(sizeof(stack_t));
 
@@ -16,23 +16,23 @@ stack_t *new_node = malloc(sizeof(stack_t));
 
 	new_node->n = value;
 	new_node->prev = NULL;
-	new_node->next = *head;
+	new_node->next = *stack;
 
-	if (*head != NULL)
+	if (*stack != NULL)
 	{
-		(*head)->prev = new_node;
+		(*stack)->prev = new_node;
 	}
-	*head = new_node;
+	*stack = new_node;
 }
 
 /**
- * print_all - function to print all elements of stack.
- * @head: head of the linked list.
- * @num_line: line to interpreted by monty
+ * p_all - function to print all elements of stack.
+ * @stack: head of the linked list.
+ * @line_number: line to interpreted by monty
 */
-void print_all(stack_t **head, __attribute__((unused))unsigned int num_line)
+void p_all(stack_t **stack, __attribute__((unused))unsigned int line_number)
 {
-stack_t *temp = *head;
+stack_t *temp = *stack;
 
 	while (temp != NULL)
 	{

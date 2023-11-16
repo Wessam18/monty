@@ -1,28 +1,28 @@
 #include "monty.h"
 /**
  * free_nodes - fuction to free the stack
- * @head: head of the stack
+ * @stack: head of the stack
 */
-void free_nodes(stack_t **head)
+void free_nodes(stack_t **stack)
 {
 stack_t *temp;
 
 	while (temp != NULL)
 	{
-		temp = *head;
-		*head = temp->next;
+		temp = *stack;
+		*stack = temp->next;
 		free(temp);
 	}
-	*head = NULL;
+	*stack = NULL;
 }
 
 /**
  * nop - function that not print anything
- * @head: head of the stack.
- * @num_line: number of args in the line
+ * @stack: head of the stack.
+ * @line_number: number of args in the line
 */
-void nop(stack_t **head, unsigned int num_line)
+void nop(stack_t **stack, unsigned int line_number)
 {
-	(void)head;
-	(void)num_line;
+	(void)stack;
+	(void)line_number;
 }

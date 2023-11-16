@@ -36,21 +36,21 @@ typedef struct stack_s
 typedef struct instruction_s
 {
     char *opcode;
-    void (*f)(stack_t **head, unsigned int num_line);
+    void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push_element(stack_t **head, unsigned int value);
-void print_all(stack_t **head, unsigned int num_line);
+void push_element(stack_t **stack, unsigned int value);
+void p_all(stack_t **stack, unsigned int line_number);
 
-void print_int(stack_t **head, unsigned int num_line);
-void remove_element(stack_t **head, unsigned int num_line);
+void print_int(stack_t **stack, unsigned int line_number);
+void remove_element(stack_t **stack, unsigned int line_number);
 
-void swap_nodes(stack_t **head, unsigned int num_line);
-void add_elements(stack_t **head, unsigned int num_line);
+void swap_nodes(stack_t **stack, unsigned int line_number);
+void add_elements(stack_t **stack, unsigned int line_number);
 
-void free_nodes(stack_t **head);
-void nop(stack_t **head, unsigned int num_line);
+void free_nodes(stack_t **stack);
+void nop(stack_t **stack, unsigned int line_number);
 
-void execute_monty(char *line, unsigned int num_line, stack_t **head);
+void execute_monty(char *line, unsigned int line_number, stack_t **stack);
 
 #endif
