@@ -13,7 +13,6 @@ stack_t *temp;
 		*stack = temp->next;
 		free(temp);
 	}
-	*stack = NULL;
 }
 
 /**
