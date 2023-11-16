@@ -15,3 +15,14 @@ stack_t *temp;
 	}
 	*head = NULL;
 }
+
+/**
+ * nop - function that not print anything
+ * @head: head of the stack.
+ * @num_line: number of args in the line
+*/
+void nop(stack_t **head, unsigned int num_line)
+{
+	(void)head;
+	(void)num_line;
+}
