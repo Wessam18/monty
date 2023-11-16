@@ -7,7 +7,7 @@ void free_nodes(stack_t **stack)
 {
 stack_t *temp;
 
-	while (temp != NULL)
+	while (*stack != NULL)
 	{
 		temp = *stack;
 		*stack = temp->next;
