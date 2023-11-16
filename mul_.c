@@ -3,7 +3,7 @@
  * mul_elements - function to mul the elements of the stack
  * @stack: the head of the stack
  * @line_number: the number of the args
- * 
+ *
 */
 void mul_elements(stack_t **stack, unsigned int line_number)
 {

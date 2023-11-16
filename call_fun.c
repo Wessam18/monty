@@ -19,7 +19,6 @@ instruction_t monty[] = {
 
 	if (op == NULL)
 		return;
-
 	for (i = 0; monty[i].opcode != NULL; i++)
 	{
 		if (strcmp(op, monty[i].opcode) == 0)
@@ -35,13 +34,10 @@ instruction_t monty[] = {
 				monty[i].f(stack, atoi(arg));
 			}
 			else
-			{
 				monty[i].f(stack, line_number);
-			}
 			return;
 		}
 	}
-
 	fprintf(stderr, "Error: L%d: Unknown opcode %s\n", line_number, op);
 	exit(EXIT_FAILURE);
 }
