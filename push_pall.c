@@ -33,11 +33,7 @@ stack_t *new_node = malloc(sizeof(stack_t));
 void p_all(stack_t **stack, __attribute__((unused))unsigned int line_number)
 {
 stack_t *temp = *stack;
-	if (*stack == NULL)
-	{
-		fprintf(stderr, "Error: L%d: can't pint, stack empty\n", line_number);
-		exit(EXIT_FAILURE);
-	}
+
 	while (temp != NULL)
 	{
 		printf("%d\n", temp->n);
