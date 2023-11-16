@@ -47,9 +47,11 @@ void remove_element(stack_t **stack, unsigned int line_number);
 
 void swap_nodes(stack_t **stack, unsigned int line_number);
 void add_elements(stack_t **stack, unsigned int line_number);
+void sub_elements(stack_t **stack, unsigned int line_number);
 
 void free_nodes(stack_t **stack);
 void nop(stack_t **stack, unsigned int line_number);
+
 
 void execute_monty(char *line, unsigned int line_number, stack_t **stack);
 
