@@ -38,6 +38,6 @@ instruction_t monty[] = {
 			return;
 		}
 	}
-	fprintf(stderr, "Error: L%d: Unknown opcode %s\n", line_number, op);
+	fprintf(stderr, "Error: L%d: unknown instruction %s\n", line_number, op);
 	exit(EXIT_FAILURE);
 }

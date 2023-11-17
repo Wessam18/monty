@@ -23,7 +23,7 @@ stack_t *head = NULL;
 	fd = fopen(name, "r");
 	if (fd == NULL)
 	{
-		fprintf(stderr, "Error: cannot open file %s.\n", name);
+		fprintf(stderr, "Error: can't open file %s.\n", name);
 		exit(EXIT_FAILURE);
 	}
 	while ((read_file = getline(&lline, &n, fd)) != -1)
