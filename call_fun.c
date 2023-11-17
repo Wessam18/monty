@@ -26,17 +26,10 @@ instruction_t monty[] = {
 			if (strcmp(op, "push") == 0)
 			{
 				arg = strtok(NULL, " \t\n");
-				if (arg == NULL)
+				if (arg == NULL || atoi(arg) == 0)
 				{
 					fprintf(stderr, "L%d: usage: push integer\n", line_number);
-					return;
-				}
-				while (isdigit(*arg) || (*arg == '-' && isdigit(*(arg + 1))))
-					arg++;
-				if (*arg != '\0')
-				{
-					fprintf(stderr, "L%d: usage: push integer\n", line_number);
-					return;
+					exit(EXIT_FAILURE);
 				}
 				monty[i].f(stack, atoi(arg));
 			}
