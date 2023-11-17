@@ -26,7 +26,7 @@ stack_t *top;
 
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "Error: L%d: can't pop stack\n", line_number);
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
