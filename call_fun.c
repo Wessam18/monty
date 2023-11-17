@@ -14,7 +14,7 @@ instruction_t monty[] = {
 	{"push", push_el}, {"pall", p_all}, {"pint", p_int},
 	{"pop", remove_el}, {"swap", swap_nodes}, {"add", add_el},
 	{"sub", sub_el}, {"div", div_el}, {"mul", mul_el}, {"pchar", pchar_el},
-	{"mod", mod_el}, {"nop", nop}, {NULL, NULL}
+	{"mod", mod_el}, {"nop", nop}, {"pstr", pstr_el}, {NULL, NULL}
 };
 
 	if (op == NULL)

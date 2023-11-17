@@ -20,3 +20,20 @@ void pchar_el(stack_t **stack, unsigned int line_number)
 
 	remove_el(stack, line_number);
 }
+
+/**
+ * pstr_el - function print string of stack
+ * @stack: head of the stack
+ * @line_number: number of args in the line
+*/
+void pstr_el(stack_t **stack, __attribute__((unused))unsigned int line_number)
+{
+stack_t *curr = *stack;
+
+	while (curr != NULL && curr->n != 0 && isascii(curr->n))
+	{
+		printf("%c", curr->n);
+		curr = curr->next;
+	}
+	putchar('\n');
+}
