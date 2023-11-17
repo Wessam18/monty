@@ -16,10 +16,12 @@ stack_t *second = (*stack)->next;
 	}
 
 	first->next = second->next;
-	second->prev = first->prev;
-
 	if (second->next != NULL)
 		second->next->prev = first;
+
+	second->prev = first->prev;
+	if (first->prev != NULL)
+		first->prev->next = second;
 
 	first->prev = second;
 	second->next = first;
