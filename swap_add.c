@@ -18,8 +18,8 @@ stack_t *second = (*stack)->next;
 	first->next = second->next;
 	second->prev = first->prev;
 
-	if (first->next != NULL)
-		first->next->prev = first;
+	if (second->next != NULL)
+		second->next->prev = first;
 
 	first->prev = second;
 	second->next = first;
