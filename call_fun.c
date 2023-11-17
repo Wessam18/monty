@@ -29,7 +29,7 @@ instruction_t monty[] = {
 				if (arg == NULL || atoi(arg) == 0)
 				{
 					fprintf(stderr, "L%d: usage: push integer\n", line_number);
-					exit(EXIT_FAILURE);
+					return;
 				}
 				monty[i].f(stack, atoi(arg));
 			}
