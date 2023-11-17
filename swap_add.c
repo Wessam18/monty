@@ -20,8 +20,6 @@ stack_t *second = (*stack)->next;
 		second->next->prev = first;
 
 	second->prev = first->prev;
-	if (first->prev != NULL)
-		first->prev->next = second;
 
 	first->prev = second;
 	second->next = first;
