@@ -59,6 +59,8 @@ void nop(stack_t **stack, unsigned int line_number);
 void pchar_el(stack_t **stack, unsigned int line_number);
 void pstr_el(stack_t **stack, unsigned int line_number);
 
+void rotl_el(stack_t **stack, unsigned int line_number);
+
 void execute_monty(char *line, unsigned int line_number, stack_t **stack);
 
 #endif
