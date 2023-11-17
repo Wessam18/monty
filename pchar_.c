@@ -1,6 +1,8 @@
 #include "monty.h"
 /**
- * 
+ * pchar_el - function print char at top of stack
+ * @stack: head of the stack
+ * @line_number: number of args in the line
 */
 void pchar_el(stack_t **stack, unsigned int line_number)
 {

@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * push_element - function to insert elements into stack
+ * push_el - function to insert elements into stack
  * @stack: head of linked list.
  * @value: value which need to insert.
 */
