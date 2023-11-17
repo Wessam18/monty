@@ -1,10 +1,10 @@
 #include "monty.h"
 /**
- * print_int - function to convert arg. to int and print all.
+ * p_int - function to convert arg. to int and print all.
  * @stack: head of the stack.
  * @line_number: number of arguments in line
 */
-void print_int(stack_t **stack, unsigned int line_number)
+void p_int(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
 	{
@@ -16,11 +16,11 @@ void print_int(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * remove_element - function to pop elements from stack
+ * remove_el - function to pop elements from stack
  * @stack: head of the stack
  * @line_number: number of args in line.
 */
-void remove_element(stack_t **stack, unsigned int line_number)
+void remove_el(stack_t **stack, unsigned int line_number)
 {
 stack_t *top;
 

@@ -39,22 +39,24 @@ typedef struct instruction_s
     void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void push_element(stack_t **stack, unsigned int value);
+void push_el(stack_t **stack, unsigned int value);
 void p_all(stack_t **stack, unsigned int line_number);
 
-void print_int(stack_t **stack, unsigned int line_number);
-void remove_element(stack_t **stack, unsigned int line_number);
+void p_int(stack_t **stack, unsigned int line_number);
+void remove_el(stack_t **stack, unsigned int line_number);
 
 void swap_nodes(stack_t **stack, unsigned int line_number);
 
-void add_elements(stack_t **stack, unsigned int line_number);
-void sub_elements(stack_t **stack, unsigned int line_number);
-void div_elements(stack_t **stack, unsigned int line_number);
-void mul_elements(stack_t **stack, unsigned int line_number);
-void mod_elements(stack_t **stack, unsigned int line_number);
+void add_el(stack_t **stack, unsigned int line_number);
+void sub_el(stack_t **stack, unsigned int line_number);
+void div_el(stack_t **stack, unsigned int line_number);
+void mul_el(stack_t **stack, unsigned int line_number);
+void mod_el(stack_t **stack, unsigned int line_number);
 
 void free_nodes(stack_t **stack);
 void nop(stack_t **stack, unsigned int line_number);
+
+void pchar_el(stack_t **stack, unsigned int line_number);
 
 
 void execute_monty(char *line, unsigned int line_number, stack_t **stack);

@@ -4,7 +4,7 @@
  * @stack: head of linked list.
  * @value: value which need to insert.
 */
-void push_element(stack_t **stack, unsigned int value)
+void push_el(stack_t **stack, unsigned int value)
 {
 stack_t *new_node = malloc(sizeof(stack_t));
 

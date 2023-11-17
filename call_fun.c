@@ -11,10 +11,10 @@ int i;
 char *arg;
 char *op = strtok(line, " \t\n");
 instruction_t monty[] = {
-	{"push", push_element}, {"pall", p_all}, {"pint", print_int},
-	{"pop", remove_element}, {"swap", swap_nodes}, {"add", add_elements},
-	{"sub", sub_elements}, {"div", div_elements}, {"mul", mul_elements},
-	{"mod", mod_elements}, {"nop", nop}, {NULL, NULL}
+	{"push", push_el}, {"pall", p_all}, {"pint", p_int},
+	{"pop", remove_el}, {"swap", swap_nodes}, {"add", add_el},
+	{"sub", sub_el}, {"div", div_el}, {"mul", mul_el}, {"pchar", pchar_el},
+	{"mod", mod_el}, {"nop", nop}, {NULL, NULL}
 };
 
 	if (op == NULL)

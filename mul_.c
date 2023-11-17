@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * mul_elements - function to mul the elements of the stack
+ * mul_el - function to mul the elements of the stack
  * @stack: the head of the stack
  * @line_number: the number of the args
  *
 */
-void mul_elements(stack_t **stack, unsigned int line_number)
+void mul_el(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -14,15 +14,15 @@ void mul_elements(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n *= (*stack)->n;
-	remove_element(stack, line_number);
+	remove_el(stack, line_number);
 }
 
 /**
- * mod_elements - function to get modules of stack elements
+ * mod_el - function to get modules of stack elements
  * @stack: head of the stack
  * @line_number: number of the args in line
 */
-void mod_elements(stack_t **stack, unsigned int line_number)
+void mod_el(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -37,5 +37,5 @@ void mod_elements(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n %= (*stack)->n;
-	remove_element(stack, line_number);
+	remove_el(stack, line_number);
 }

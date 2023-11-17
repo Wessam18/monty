@@ -27,11 +27,11 @@ stack_t *second = (*stack)->next;
 }
 
 /**
- * add_elements - function that add the first 2 elements of the stack
+ * add_el - function that add the first 2 elements of the stack
  * @stack: head of the stack
  * @line_number: number of the args in the line
 */
-void add_elements(stack_t **stack, unsigned int line_number)
+void add_el(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
@@ -40,5 +40,5 @@ void add_elements(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n += (*stack)->n;
-	remove_element(stack, line_number);
+	remove_el(stack, line_number);
 }
