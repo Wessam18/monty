@@ -17,7 +17,7 @@ instruction_t monty[] = {
 	{"mod", mod_el}, {"nop", nop}, {"pstr", pstr_el}, {NULL, NULL}
 };
 
-	if (op == NULL)
+	if (op == NULL || op[0] == '#')
 		return;
 	for (i = 0; monty[i].opcode != NULL; i++)
 	{
