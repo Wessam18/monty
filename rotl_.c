@@ -21,3 +21,27 @@ stack_t *last = *stack;
 		last->next->next = NULL;
 	}
 }
+
+/**
+ * rotr_el - fuction rotate the stack to bottom
+ * @stack: head of the stack
+ * @line_number: number of args in the line
+*/
+void rotr_el(stack_t **stack, __attribute__((unused))unsigned int line_number)
+{
+stack_t *first = *stack;
+stack_t *last = *stack;
+
+	if (*stack != NULL && (*stack)->next != NULL)
+	{
+		while (last->next != NULL)
+		{
+			last = last->next;
+		}
+		*stack = last;
+		last->prev->next = NULL;
+		last->prev = NULL;
+		last->next = first;
+		first->prev = last;
+	}
+}
